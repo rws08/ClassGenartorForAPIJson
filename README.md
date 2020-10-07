@@ -21,3 +21,5 @@
 - godef
 - goreturns
 - golint
+- github.com/nasa9084/go-openapi
+- golang.org/x/net/html
