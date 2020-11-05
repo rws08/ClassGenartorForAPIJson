@@ -3,7 +3,12 @@
 ## Install
 1. [install a Golang](https://golang.org/dl/)
 
-### Using Go Package
+## Used
+- go
+- React
+- SQLite3
+
+## Using Go Package
 - gocode
 - gopkgs
 - go-outline
@@ -21,5 +26,13 @@
 - godef
 - goreturns
 - golint
+
+### Get package(go get -u)
 - github.com/nasa9084/go-openapi
 - golang.org/x/net/html
+- github.com/evanphx/json-patch/v5
+- github.com/gin-contrib/multitemplate
+- github.com/gin-gonic/contrib/static
+- github.com/travisjeffery/go-batcher
+- github.com/nasa9084/go-openapi
+- golang.org/x/net/html    
