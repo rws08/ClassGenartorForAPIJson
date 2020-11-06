@@ -40,7 +40,7 @@ func CreateServer(c *gin.Context) {
 	CreateInfo(context)
 
 	ret := map[string]interface{}{}
-	ret["server_key"] = fmt.Sprint(serverKey)
+	ret["SERVER_KEY"] = fmt.Sprint(serverKey)
 	c.JSON(http.StatusOK, ret)
 }
 
@@ -94,7 +94,7 @@ func UpdateServer(c *gin.Context) {
 	strQuery := MakeUpdateQuery("server", []string{"name", "url", "description"}, []interface{}{_name, _url, _description}, "key = "+_key)
 
 	log.Println(strQuery)
-	// 서버 정보 변경
+	// 서버 변경
 	_, err := baseDB.Exec(strQuery)
 	if err != nil {
 		ReturnError(c, err)
@@ -102,7 +102,7 @@ func UpdateServer(c *gin.Context) {
 	}
 
 	ret := map[string]interface{}{}
-	ret["server_key"] = fmt.Sprint(_key)
+	ret["SERVER_KEY"] = fmt.Sprint(_key)
 	c.JSON(http.StatusOK, ret)
 }
 
@@ -114,7 +114,7 @@ func DelServer(c *gin.Context) {
 	// key=3
 	_key, _ := c.GetQuery("key")
 
-	// 서버 정보 변경
+	// 서버 삭제
 	_, err := baseDB.Exec("DELETE FROM server WHERE key = $1", _key)
 	if err != nil {
 		ReturnError(c, err)
