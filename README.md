@@ -28,11 +28,9 @@
 - golint
 
 ### Get package(go get -u)
-- github.com/nasa9084/go-openapi
-- golang.org/x/net/html
-- github.com/evanphx/json-patch/v5
-- github.com/gin-contrib/multitemplate
+- github.com/gin-contrib/cors
 - github.com/gin-gonic/contrib/static
-- github.com/travisjeffery/go-batcher
-- github.com/nasa9084/go-openapi
-- golang.org/x/net/html    
+- github.com/gin-gonic/gin
+- github.com/mattn/go-sqlite3
+
+- github.com/tealeg/xlsx

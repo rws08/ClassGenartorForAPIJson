@@ -34,12 +34,10 @@ func CreateServer(c *gin.Context) {
 		return
 	}
 	serverKey, _ := result.LastInsertId()
-	// 서버 정보 생성
-	result, err = baseDB.Exec("INSERT INTO info(server_key, prefix) VALUES ($1, $2)", serverKey, "")
-	if err != nil {
-		ReturnError(c, err)
-		return
-	}
+
+	var context = c.Copy()
+	AddQuery(context, []string{"key"}, []string{fmt.Sprint(serverKey)})
+	CreateInfo(context)
 
 	ret := map[string]interface{}{}
 	ret["server_key"] = fmt.Sprint(serverKey)
