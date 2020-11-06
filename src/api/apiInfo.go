@@ -11,8 +11,8 @@ import (
 
 // ObjInfo ... info 구조
 type ObjInfo struct {
-	Key       int    `json:"key"`        // id
-	ServerKey string `json:"server_key"` // server_key
+	Key       int    `json:"key"`        // key
+	ServerKey int    `json:"server_key"` // server_key
 	Prefix    string `json:"prefix"`     // prefix
 }
 

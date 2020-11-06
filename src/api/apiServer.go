@@ -11,7 +11,7 @@ import (
 
 // ObjServer ... server 구조
 type ObjServer struct {
-	Key  int    `json:"key"`         // id
+	Key  int    `json:"key"`         // key
 	Name string `json:"name"`        // name
 	URL  string `json:"url"`         // url
 	Desc string `json:"description"` // desc
